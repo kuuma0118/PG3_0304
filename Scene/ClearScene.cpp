@@ -2,13 +2,9 @@
 #include <Novice.h>
 
 void ClearScene::Init() {
-	inputManager_ = InputManager::GetInstance();
 }
 
 void ClearScene::Update() {
-	if (inputManager_->ReleaseKey(DIK_SPACE)) {
-		sceneNo = TITLE;
-	}
 }
 
 void ClearScene::Draw() {

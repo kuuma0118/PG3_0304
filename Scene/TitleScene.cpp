@@ -1,13 +1,9 @@
 #include "TitleScene.h"
 
 void TitleScene::Init() {
-	inputManager_ = InputManager::GetInstance();
 }
 
 void TitleScene::Update() {
-	if (inputManager_->ReleaseKey(DIK_SPACE)) {
-		sceneNo = STAGE;
-	}
 }
 
 void TitleScene::Draw() {

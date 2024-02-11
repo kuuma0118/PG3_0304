@@ -12,7 +12,7 @@ GameManager::GameManager() {
 	sceneArr_[STAGE] = std::make_unique<GamePlayScene>();
 	sceneArr_[CLEAR] = std::make_unique<ClearScene>();
 
-	currentSceneNo_ = TITLE;
+	currentSceneNo_ = STAGE;
 }
 
 int GameManager::Run() {
@@ -20,14 +20,12 @@ int GameManager::Run() {
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, kWindowWidth, kWindowHeight);
 
-	inputManager_ = InputManager::GetInstance();
+	prevSceneNo_ = currentSceneNo_;
 
 	sceneArr_[currentSceneNo_]->Init();
 
 	while (Novice::ProcessMessage() == 0) {
 		Novice::BeginFrame();
-
-		inputManager_->Update();
 
 		// シーンチェック
 		prevSceneNo_ = currentSceneNo_;
@@ -49,10 +47,6 @@ int GameManager::Run() {
 		sceneArr_[currentSceneNo_]->Draw();
 
 		Novice::EndFrame();
-
-		if (inputManager_->ReleaseKey(DIK_ESCAPE)) {
-			break;
-		}
 	}
 
 	// ライブラリの終了

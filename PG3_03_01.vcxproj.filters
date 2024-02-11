@@ -20,23 +20,11 @@
     <Filter Include="ヘッダー">
       <UniqueIdentifier>{f853de6f-62d3-4bf4-a561-b94125397e8f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー\Collision">
-      <UniqueIdentifier>{c06e1c6d-ef48-4f16-b9d7-9a98b15ba130}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース\Collision">
-      <UniqueIdentifier>{2999660f-0669-4f44-91dd-0d4f09c354ef}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ヘッダー\Player">
       <UniqueIdentifier>{a51692d0-3033-42f4-b3c2-14da81456131}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース\Player">
       <UniqueIdentifier>{fc776827-67dc-47e6-bac2-a0fcaada1585}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー\Enemy">
-      <UniqueIdentifier>{47baaaa1-117e-4059-a3ed-871032ec7801}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース\Enemy">
-      <UniqueIdentifier>{2f31c8fc-ab0d-4cd1-8c5b-726cafe0d911}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース\Scene">
       <UniqueIdentifier>{bd978a4d-ea1b-4834-ae5e-a34795b72ff9}</UniqueIdentifier>
@@ -44,11 +32,11 @@
     <Filter Include="ヘッダー\Scene">
       <UniqueIdentifier>{6e920a4e-dae6-40d0-beb2-244d8ca8b2af}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー\Component">
-      <UniqueIdentifier>{c0fb2b33-1869-4811-8835-99a2ac174996}</UniqueIdentifier>
+    <Filter Include="ソース\Input">
+      <UniqueIdentifier>{6fe97632-0818-4bf4-ae84-342796423be5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース\Component">
-      <UniqueIdentifier>{c20062b3-2c8a-4787-ba1d-e809c536b40c}</UniqueIdentifier>
+    <Filter Include="ヘッダー\Input">
+      <UniqueIdentifier>{b87af297-e226-4c07-892b-d9328905c1b8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -74,16 +62,7 @@
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp">
       <Filter>KamataEngine\Source</Filter>
     </ClCompile>
-    <ClCompile Include="Collision\Collision.cpp">
-      <Filter>ソース\Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy\Enemy.cpp">
-      <Filter>ソース\Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="Player\Player.cpp">
-      <Filter>ソース\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Player\PlayerBullet.cpp">
       <Filter>ソース\Player</Filter>
     </ClCompile>
     <ClCompile Include="Scene\ClearScene.cpp">
@@ -101,8 +80,11 @@
     <ClCompile Include="Scene\TitleScene.cpp">
       <Filter>ソース\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Component\InputManager.cpp">
-      <Filter>ソース\Component</Filter>
+    <ClCompile Include="Input\InputHandler.cpp">
+      <Filter>ソース\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\ICommand.cpp">
+      <Filter>ソース\Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -178,16 +160,7 @@
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
     <ClInclude Include="Utility.h" />
-    <ClInclude Include="Collision\Collision.h">
-      <Filter>ヘッダー\Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy\Enemy.h">
-      <Filter>ヘッダー\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Player\Player.h">
-      <Filter>ヘッダー\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Player\PlayerBullet.h">
       <Filter>ヘッダー\Player</Filter>
     </ClInclude>
     <ClInclude Include="Scene\ClearScene.h">
@@ -205,8 +178,11 @@
     <ClInclude Include="Scene\TitleScene.h">
       <Filter>ヘッダー\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Component\InputManager.h">
-      <Filter>ヘッダー\Component</Filter>
+    <ClInclude Include="Input\ICommand.h">
+      <Filter>ヘッダー\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\InputHandler.h">
+      <Filter>ヘッダー\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

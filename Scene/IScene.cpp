@@ -1,6 +1,6 @@
 #include "IScene.h"
 
-int IScene::sceneNo = TITLE;
+int IScene::sceneNo = STAGE;
 
 // 純粋デストラクタの定義
 IScene::~IScene(){}
