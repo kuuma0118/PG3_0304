@@ -3,30 +3,30 @@
 #include <Novice.h>
 
 void Enemy::Init() {
-	pos_.x = kWindowWidth / 2;
-	pos_.y = 100;
-	vel_.x = 2.0f;
-	vel_.y = 0;
+	Pos_.x = kWindowWidth / 2;
+	Pos_.y = 100;
+	Velcity_.x = 2.0f;
+	Velcity_.y = 0;
 	radius_ = 32.0f;
 	isAlive_ = true;
 }
 
 void Enemy::Update() {
 	// 移動処理
-	pos_.x += vel_.x;
-	pos_.y += vel_.y;
+	Pos_.x += Velcity_.x;
+	Pos_.y += Velcity_.y;
 
 	// 画面端まで行くと反射
-	if (pos_.x - radius_ <= 0 || pos_.x + radius_ >= 1280) {
-		vel_.x *= -1;
+	if (Pos_.x - radius_ <= 0 || Pos_.x + radius_ >= 1280) {
+		Velcity_.x *= -1;
 	}
-	if (pos_.y - radius_ <= 0 || pos_.y + radius_ >= 720) {
-		vel_.y *= -1;
+	if (Pos_.y - radius_ <= 0 || Pos_.y + radius_ >= 720) {
+		Velcity_.y *= -1;
 	}
 }
 
 void Enemy::Draw() {
 	if (isAlive_) {
-		Novice::DrawEllipse(pos_.x, pos_.y, radius_, radius_, 0.0f, RED, kFillModeSolid);
+		Novice::DrawEllipse(Pos_.x, Pos_.y, radius_, radius_, 0.0f, RED, kFillModeSolid);
 	}
 }

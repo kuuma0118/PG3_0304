@@ -7,10 +7,10 @@ void PlayerBullet::Init() {
 	// 座標
 	pos_ = { kWindowWidth / 2, kWindowHeight / 2 };
 	// 速度
-	const float kSpeed = 6.0f;
+	const float kSpeed = 10.0f;
 	vel_ = { 0, kSpeed };
 	// 半径
-	radius_ = 32;
+	radius_ = 16;
 	// 弾が存在しているか
 	isAlive_ = false;
 }

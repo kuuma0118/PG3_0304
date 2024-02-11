@@ -16,7 +16,7 @@ GameManager::GameManager() {
 }
 
 int GameManager::Run() {
-	const char kWindowTitle[] = "LE2B_16_PG3_03_01";
+	const char kWindowTitle[] = "LE2B_23_PG3_03_01";
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, kWindowWidth, kWindowHeight);
 

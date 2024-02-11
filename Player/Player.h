@@ -28,7 +28,7 @@ public:
 	/// User Method
 	/// 
 	// Getter
-	Vector2 GetTranslation() { return pos_; }
+	Vector2 GetTranslation() { return Pos_; }
 	bool GetIsShot() { return isShot_; }
 	float GetRadius() { return radius_; }
 
@@ -36,8 +36,8 @@ public:
 	PlayerBullet bullet_;
 private:
 	InputManager* inputManager_;
-	Vector2 pos_;	// 座標
-	Vector2 vel_;	// 速度
+	Vector2 Pos_;	// 座標
+	Vector2 Velcity_;	// 速度
 	float radius_;	// 半径
 	bool isShot_;   // 発射フラグ
 };

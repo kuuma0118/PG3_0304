@@ -11,12 +11,12 @@ void Player::Init() {
 
 	// 初期値の設定
 	// 座標
-	pos_ = { kWindowWidth / 2, kWindowHeight / 2 };
+	Pos_ = { kWindowWidth / 2, kWindowHeight / 2 };
 	// 速度
-	const float kSpeed = 4.0f;
-	vel_ = { kSpeed, kSpeed };
+	const float kSpeed = 5.0f;
+	Velcity_ = { kSpeed, kSpeed };
 	// 半径
-	radius_ = 16;
+	radius_ = 32;
 	// 発射フラグ
 	isShot_ = false;
 
@@ -24,7 +24,7 @@ void Player::Init() {
 	// 初期化
 	bullet_.Init();
 	// 初期位置
-	bullet_.SetPos(pos_);
+	bullet_.SetPos(Pos_);
 }
 
 void Player::Update() {
@@ -32,17 +32,17 @@ void Player::Update() {
 	// 移動処理
 	// Y軸
 	if (inputManager_->PressKey(DIK_W)) {
-		pos_.y -= vel_.y;
+		Pos_.y -= Velcity_.y;
 	}
 	if (inputManager_->PressKey(DIK_S)) {
-		pos_.y += vel_.y;
+		Pos_.y += Velcity_.y;
 	}
 	// X軸
 	if (inputManager_->PressKey(DIK_D)) {
-		pos_.x += vel_.x;
+		Pos_.x += Velcity_.x;
 	}
 	if (inputManager_->PressKey(DIK_A)) {
-		pos_.x -= vel_.x;
+		Pos_.x -= Velcity_.x;
 	}
 
 	// 発射処理
@@ -61,14 +61,13 @@ void Player::Update() {
 		bullet_.Update();
 	}
 	else {
-		// 弾を発射してない間は自機に追従
-		bullet_.SetPos(pos_);
+		bullet_.SetPos(Pos_);
 	}
 }
 
 void Player::Draw() {
 	// 自機
-	Novice::DrawEllipse(pos_.x, pos_.y, radius_, radius_, 0.0f, BLUE, kFillModeSolid);
+	Novice::DrawEllipse(Pos_.x, Pos_.y, radius_, radius_, 0.0f, BLUE, kFillModeSolid);
 	// 弾
 	bullet_.Draw();
 }

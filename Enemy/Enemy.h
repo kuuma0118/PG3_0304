@@ -24,7 +24,7 @@ public:
 	/// User Method
 	/// 
 	// Getter
-	Vector2 GetTranslation() { return pos_; }
+	Vector2 GetTranslation() { return Pos_; }
 	bool GetIsAlive() { return isAlive_; }
 	float GetRadius() { return radius_; }
 
@@ -32,8 +32,8 @@ public:
 	void SetIsAlive(bool isAlive) { isAlive_ = isAlive; }
 
 private:
-	Vector2 pos_;	// 座標
-	Vector2 vel_;	// 速度
+	Vector2 Pos_;	// 座標
+	Vector2 Velcity_;	// 速度
 	float radius_;	// 半径
 	bool isAlive_;  // 生存フラグ
 };
